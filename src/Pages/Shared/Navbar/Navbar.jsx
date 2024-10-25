@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { IoBagHandleSharp } from "react-icons/io5";
 
 const Navbar = ()=>{
     return(
@@ -23,37 +24,22 @@ const Navbar = ()=>{
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
+        <li className=""><Link to="/">Home</Link></li>
+        <li className=""><Link to="/service">Service</Link></li>
+        <li className=""><Link to="/login"> <IoBagHandleSharp /> Log-In</Link></li>
       </ul>
     </div>
-    <Link className="btn btn-ghost text-xl font-bold">Doctor <sub>Services</sub> </Link>
+    <Link className="btn btn-ghost text-[19px] font-bold text-blue-700">Doctor <sub>Services</sub> </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
+    <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/">Home</Link></li>
+    <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/service">Service</Link></li>
+    <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/login"><IoBagHandleSharp />  Log-In</Link></li>
+    
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
-  </div>
+ 
 </div>
         </div>
     )

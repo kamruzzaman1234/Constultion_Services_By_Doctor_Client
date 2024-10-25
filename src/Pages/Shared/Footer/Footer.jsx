@@ -3,6 +3,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { MdMarkEmailUnread } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 
+
 const Footer = () => {
     return (
         <div className="py-10 bg-gray-100">
@@ -15,7 +16,7 @@ const Footer = () => {
                             alt=""
                             className="w-[170px] h-[160px] rounded-md"
                         />
-                        <p className="text-gray-700 text-center">
+                        <p className="text-gray-700 ">
                             Consultation services by doctors offer personalized medical guidance,
                             diagnosis, and treatment advice to address patients' health concerns.
                         </p>
@@ -23,7 +24,7 @@ const Footer = () => {
 
                     {/* Specialties Section */}
                     <div className="px-8 py-4 rounded-lg">
-                        <h2 className="text-[22px] font-bold mb-8 text-black">Specialties</h2>
+                        <h2 className="text-[22px] font-bold mb-8 text-blue-900">Specialties</h2>
                         <ul className="text-[16px] font-semibold space-y-3 text-gray-700">
                             <li>Neurology</li>
                             <li>Dentist</li>
@@ -34,7 +35,7 @@ const Footer = () => {
 
                     {/* Services Section */}
                     <div className="px-8 py-4 rounded-lg">
-                        <h2 className="text-[22px] font-bold mb-8 text-black">Services</h2>
+                        <h2 className="text-[22px] font-bold mb-8 text-blue-900">Services</h2>
                         <ul className="text-[16px] font-semibold space-y-3 text-gray-700">
                             <li>Medical</li>
                             <li>Operation</li>
@@ -45,7 +46,7 @@ const Footer = () => {
 
                     {/* Contact Section */}
                     <div className="px-8 py-4 rounded-lg">
-                        <h2 className="text-[22px] font-bold mb-8 text-black">Contact Us</h2>
+                        <h2 className="text-[22px] font-bold mb-8 text-blue-900">Contact Us</h2>
                         <ul className="text-[16px] font-semibold space-y-3 text-gray-700">
                             <li className="flex gap-2 items-center">
                                 <FaLocationDot /> Dhaka, Gulshan
@@ -61,7 +62,7 @@ const Footer = () => {
 
                     {/* Newsletter Section */}
                     <div className="px-8 py-4 rounded-lg">
-                        <h2 className="text-[22px] font-bold mb-8 text-black">Newsletter</h2>
+                        <h2 className="text-[22px] font-bold mb-8 text-blue-900">Newsletter</h2>
                         <div className="join mb-4 relative">
                            <input type="text"  placeholder="Enter Email" className="input input-bordered"/>
                            <button className="input input-bordered bg-blue-700 text-white absolute right-0">Search</button>
