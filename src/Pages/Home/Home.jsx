@@ -1,5 +1,6 @@
 import BackgroundImg from "./Banner/BackgroundImg";
 import Banner from "./Banner/Banner";
+import Blog from "./BlogArea/Blog";
 import ClientAndSpecialites from "./ClientAndSpecialites/ClientAndSpecialites";
 import ExtraFeature from "./ExtraFeature/ExtraFeature";
 import LookingFor from "./LookingForArea/LookingFor";
@@ -15,6 +16,7 @@ const Home = ()=>{
             <OverView></OverView>
             {/* Booking Service Area */}
             <ExtraFeature></ExtraFeature>
+            <Blog></Blog>
         </div>
     )
 }
