@@ -1,20 +1,22 @@
+import { Link } from "react-router-dom";
 import Filter from "./Filter";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
 const Banner = ()=>{
     return(
         <div className="py-[150px]" 
         style={{backgroundImage:
         "url('https://i.ibb.co.com/ckPVxPF/pexels-negativespace-48603.jpg')", 
-        backgroundSize:"cover", backgroundRepeat:"no-repeat",
+        backgroundSize:"cover", backgroundRepeat:"no-repeat", backgroundAttachment:'fixed',
          backgroundPosition:"center center"}}>
             <div className="max-w-7xl mx-auto">
                 <div className="text-center">
-                    <h2 className="text-[36px] font-bold">Search Doctor Make and Appointment</h2>
-                    <p className="text-[17px]">Discover the best doctors clients and hospital the city nearest to you.</p>
+                    <h2 className="text-[46px] font-bold">Search Doctor Make and Appointment</h2>
+                    <p className="text-[20px]">Discover the best doctors clients and hospital the city nearest to you.</p>
                 </div>
-                <div className="my-2">
-                    <div className="flex justify-center items-center gap-8">
-                        <div className="bg-white flex justify-between px-4 py-4 w-[32%] rounded-lg ">
+                <div className="mt-10 flex justify-center items-center">
+                    {/* <div className="flex flex-col lg:flex-row  justify-center items-center gap-8">
+                        <div className="bg-white flex justify-between px-4 py-4 w-full rounded-lg ">
                             <label htmlFor="location">Select Your Location</label>
                             <select name="" id="" className="outline-none">
                                 <option value=""></option>
@@ -26,7 +28,7 @@ const Banner = ()=>{
                                 <option value="Syhlet">Syhlet</option>
                             </select>
                         </div>
-                        <div className="bg-white flex justify-between px-4 py-4 w-[32%] rounded-lg ">
+                        <div className="bg-white px-4 py-4 w-full  rounded-lg ">
                             
                             <input type="text" className="outline-none w-full"
                              placeholder="Search Doctor Client etc " />
@@ -41,7 +43,13 @@ const Banner = ()=>{
                         <div>
 
                         </div>
-                    </div>
+                    </div> */}
+                   <div className="bg-blue-800 flex justify-center items-center rounded-full">
+                        
+                        
+                        <Link to="/doctor" className=" text-center px-14 flex items-center gap-2 justify-center
+                         py-4 font-bold text-white text-[26px]"><FaArrowAltCircleRight className=""></FaArrowAltCircleRight> Choose Doctor and Booking</Link>
+                   </div>
                 </div>
              </div>
          </div>
