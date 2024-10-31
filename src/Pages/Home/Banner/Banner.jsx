@@ -9,7 +9,7 @@ const Banner = ()=>{
         "url('https://i.ibb.co.com/ckPVxPF/pexels-negativespace-48603.jpg')", 
         backgroundSize:"cover", backgroundRepeat:"no-repeat", backgroundAttachment:'fixed',
          backgroundPosition:"center center"}}>
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-6 lg:mx-auto">
                 <div className="text-center">
                     <h2 className="text-[46px] font-bold">Search Doctor Make and Appointment</h2>
                     <p className="text-[20px]">Discover the best doctors clients and hospital the city nearest to you.</p>

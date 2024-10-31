@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const LookingFor  =()=>{
     return(
         <div className="py-20">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-6 lg:mx-auto">
                 <div>
                     <h2 className="text-[26px] font-bold text-center mb-12">What Are You Looking For</h2>
                 </div>

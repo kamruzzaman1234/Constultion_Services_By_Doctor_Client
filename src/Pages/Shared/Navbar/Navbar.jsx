@@ -13,7 +13,7 @@ const Navbar = ()=>{
   }
     return(
         <div>
- <div className="navbar max-w-7xl mx-auto bg-base-100">
+ <div className="navbar max-w-7xl mx-6 lg:mx-auto bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -36,10 +36,11 @@ const Navbar = ()=>{
         {user ? <>
           <li className=""><Link to="/">Home</Link></li>
         <li className=""><Link to="/doctor">Doctor</Link></li>
-        <li><Link to="/consultation"></Link>Consultation List</li>
+        <li><Link to="/consultationList"></Link>Consultation List</li>
         </>: <>
         <li className=""><Link to="/">Home</Link></li>
         <li className=""><Link to="/doctor">Doctor</Link></li>
+        <li><Link to="/consultationList"></Link>Consultation List</li>
         </>}
         
       </ul>
@@ -52,7 +53,7 @@ const Navbar = ()=>{
       {user ? <>
         <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/">Home</Link></li>
         <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/doctor">Doctor</Link></li>
-        <li><Link className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold" to="/consultation">Consultation List</Link></li>
+        <li><Link className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold" to="/consultationList">Consultation List</Link></li>
       </> : <>
       <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/">Home</Link></li>
       <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/doctor">Doctor</Link></li>

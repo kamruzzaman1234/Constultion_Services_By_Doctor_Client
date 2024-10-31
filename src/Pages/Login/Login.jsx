@@ -51,7 +51,7 @@ const Login = ()=>{
 
     return(
         <div className="py-10 bg-gray-100">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-6 lg:mx-auto">
             <ToastContainer></ToastContainer>
                 <div className="my-10 text-center">
                     <h2 className="text-[40px] font-bold text-blue-900 underline">Login</h2>

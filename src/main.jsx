@@ -17,6 +17,8 @@ import AuthProvider from '../Provider/AuthProvider.jsx';
 import DoctorPage from './Pages/DoctorPage/DoctorPage.jsx';
 import PrivetRouter from '../PrivetRouter/PrivetRouter.jsx';
 import ViewDoctor from './Pages/ViewDoctor/ViewDoctor.jsx';
+import DoctorBooking from './Pages/DoctorBooking/DoctorBooking.jsx';
+import ConsultationList from './Pages/ConsultationList/ConsultationList.jsx';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,16 @@ const router = createBrowserRouter([
         path: "viewDoctor/:id",
         element: <PrivetRouter> <ViewDoctor></ViewDoctor> </PrivetRouter>,
         loader: ({ params })=> fetch(`http://localhost:6007/doctorInfo/${params.id}`)
+      },
+      {
+        path: "bookingDoctor/:id",
+        element: <PrivetRouter> <DoctorBooking></DoctorBooking> </PrivetRouter>,
+        loader: ({ params })=> fetch(`http://localhost:6007/doctorInfo/${params.id}`)
+      },
+      {
+        path:"consultationList",
+        element: <PrivetRouter> <ConsultationList></ConsultationList> </PrivetRouter>,
+        loader: ({params})=> fetch(`http://localhost:6007/doctorBooking`)
       }
     ]
   },
