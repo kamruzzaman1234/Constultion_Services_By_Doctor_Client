@@ -37,10 +37,12 @@ const Navbar = ()=>{
           <li className=""><Link to="/">Home</Link></li>
         <li className=""><Link to="/doctor">Doctor</Link></li>
         <li><Link to="/consultationList"></Link>Consultation List</li>
+        <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/addService">Add Service</Link></li>
         </>: <>
         <li className=""><Link to="/">Home</Link></li>
         <li className=""><Link to="/doctor">Doctor</Link></li>
         <li><Link to="/consultationList"></Link>Consultation List</li>
+        <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/addService">Add Service</Link></li>
         </>}
         
       </ul>
@@ -54,9 +56,11 @@ const Navbar = ()=>{
         <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/">Home</Link></li>
         <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/doctor">Doctor</Link></li>
         <li><Link className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold" to="/consultationList">Consultation List</Link></li>
+        <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/addService">Add Service</Link></li>
       </> : <>
       <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/">Home</Link></li>
       <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/doctor">Doctor</Link></li>
+      <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/addService">Add Service</Link></li>
       </>}
 
     

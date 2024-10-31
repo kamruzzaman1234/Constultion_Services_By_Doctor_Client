@@ -23,7 +23,7 @@ const LookingFor  =()=>{
                     </div>
                     <div className="relative inline-block">
                         <div className="">
-                            <img className="rounded-lg opacity-90"
+                            <img className="rounded-lg opacity-90"  
                             src="https://i.ibb.co.com/tQ699pP/pexels-shvetsa-3845129.jpg" alt="" />
                         </div>
                         <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>

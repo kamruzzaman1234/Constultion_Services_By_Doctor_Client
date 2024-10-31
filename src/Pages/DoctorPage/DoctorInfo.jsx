@@ -22,10 +22,10 @@ const DoctorInfo = ({doctor})=>{
          
     return(
         <div className="bg-white shadow-lg p-3 flex flex-col lg:flex-row justify-between items-center">
-            <div className="flex gap-10 w-[100%] lg:w-[28%] lg:shadow-lg">
+            <div className="flex gap-10 w-[100%] lg:w-[28%] lg:shadow-lg p-4">
                 <div>
                     <img src={image} alt={name} className="w-[140px]
-                     h-[100px] rounded-lg"/>
+                     h-[130px] rounded-lg"/>
                 </div>
                 <div>
                     <h2 className="font-bold">{name}</h2>
@@ -37,7 +37,7 @@ const DoctorInfo = ({doctor})=>{
                     </div>
                 </div>
             </div>
-            <div className="w-[100%] lg:w-[28%] mt-5 lg:mt-0 lg:shadow-lg">
+            <div className="w-[100%] lg:w-[28%] mt-5 lg:mt-0 lg:shadow-lg p-4">
                 <div className="flex flex-col">
                 <h2 className="text-[17px] text-semibold">Works in</h2>
                 <span className="text-[18px] font-bold text-justify">{medical_name}</span>

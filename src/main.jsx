@@ -19,6 +19,7 @@ import PrivetRouter from '../PrivetRouter/PrivetRouter.jsx';
 import ViewDoctor from './Pages/ViewDoctor/ViewDoctor.jsx';
 import DoctorBooking from './Pages/DoctorBooking/DoctorBooking.jsx';
 import ConsultationList from './Pages/ConsultationList/ConsultationList.jsx';
+import AddService from './Pages/AddService/AddService.jsx';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
         path:"consultationList",
         element: <PrivetRouter> <ConsultationList></ConsultationList> </PrivetRouter>,
         loader: ({params})=> fetch(`http://localhost:6007/doctorBooking`)
+      },
+      {
+        path:"addService",
+        element: <AddService></AddService>
       }
     ]
   },
