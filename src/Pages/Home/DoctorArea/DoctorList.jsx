@@ -8,8 +8,8 @@ const DoctorList = ({docList})=>{
     return(
         <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
         {/* Image Carousel */}
-        <div>
-          <img src={image} alt={name} className="w-full h-[300px]"/>
+        <div className="flex sm:justify-center">
+          <img src={image} alt={name} className="w-[350px]  lg:w-full h-[300px]"/>
         </div>
   
         <div className="p-4">

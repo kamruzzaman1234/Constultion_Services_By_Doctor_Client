@@ -3,6 +3,8 @@ import { IoBagHandleSharp } from "react-icons/io5";
 import { useContext } from "react";
 import { AuthContext } from "../../../../Provider/AuthProvider";
 import { IoIosLogOut } from "react-icons/io";
+import { FaUserDoctor } from "react-icons/fa6";
+
 
 const Navbar = ()=>{
   const {user, logOut} = useContext(AuthContext)
@@ -47,8 +49,9 @@ const Navbar = ()=>{
         
       </ul>
     </div>
-    <Link className="btn btn-ghost text-[19px] hidden
-     lg:block font-bold text-blue-700">Doctor <sub>Services</sub> </Link>
+    <Link className="bg-gray-50 rounded-lg text-[19px] hidden 
+     lg:block font-bold flex items-center  text-blue-700"> <FaUserDoctor className="text-[42px]"/>
+     <span className="text-[22px] font-bold"> <sub>Doc</sub> <sup>Services</sup> </span>  </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -74,16 +77,17 @@ const Navbar = ()=>{
         <details className="border-2 border-blue-500 rounded-lg ">
           <summary className="">{user?.email}</summary>
           
+          
           <ul className="bg-base-100 rounded-t-none space-y-2">
-          <li><Link to="/" className="bg-[#FF5A3A]
-          text-white font-bold">Bookings</Link></li>
+         
             <li className=""> 
-              <button className="bg-blue-700 text-white font-bold rounded-lg" 
+              <button className="bg-blue-700  text-white font-bold rounded-lg" 
               onClick={handleLogOut}> <IoIosLogOut></IoIosLogOut>  Log Out</button> </li>
            
             
           </ul>
         </details>
+        
       </li>
     </ul>
     
