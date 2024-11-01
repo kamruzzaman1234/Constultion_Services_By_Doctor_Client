@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Blog = ()=>{
     return(
         <div className="py-20 bg-blue-100">
-            <div className="max-w-7xl mx-6 md:mx-10 lg:auto">
+            <div className="max-w-7xl mx-6 md:mx-10 lg:mx-auto">
             <div className="mb-12">
                     <h2 className="text-[26px] font-bold text-center">Blog And News</h2>
                     <p className="text-center">Clients are individuals or businesses that use your They trust you for your expertise, <br /> reliability,

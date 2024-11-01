@@ -7,18 +7,18 @@ import { useContext, useEffect, useState } from "react";
 const ConsultationList = ()=>{
     const [consultationList, setConsultationList] = useState([])
     const {user} = useContext(AuthContext)
-    const url = `http://localhost:6007/doctorBooking`
+    const url = `https://consultation-services-by-doctors.vercel.app/doctorBooking`
 
     const handleDelete = (id)=>{
       const processed = confirm("Are You Sure you want to Delete")
      if(processed){
-      fetch(`http://localhost:6007/doctorBooking/${id}`, {
+      fetch(`https://consultation-services-by-doctors.vercel.app/doctorBooking/${id}`, {
           method:"DELETE",
         
       })
       .then(res=> res.json())
       .then(data=>{
-          console.log(data)
+          
           if(data.deletedCount > 0){
               alert("Deleted SuccessFull")
               const reamining = consultationList.filter(booking=> booking._id !== id)
@@ -30,22 +30,23 @@ const ConsultationList = ()=>{
   }
    
    const handleConfirm = (id)=>{
-      fetch(`http://localhost:6007/doctorBooking/${id}`,{
+      fetch(`https://consultation-services-by-doctors.vercel.app/doctorBooking/${id}`,{
         method:"PATCH",
         headers: {
           'content-type':'application/json'
         },
-        body: JSON.stringify({status: "confirm"})
+        body: JSON.stringify({status: "confirm"}),
+        credentials: "include"
       })
       .then(res=> res.json())
       .then(data=> {
-        console.log(data)
+       
         if(data.modifiedCount > 0){
           const remining = consultationList.filter(booking=> booking._id !== id)
           const updated = consultationList.find(booking=> booking._id === id)
           updated.status = "confirm"
           const newBooking = [updated, ...remining]
-          console.log(newBooking)
+          
           setConsultationList(newBooking)
         }
       })
@@ -59,7 +60,7 @@ const ConsultationList = ()=>{
         .then(res=> res.json())
         .then(data=>{
             setConsultationList(data)
-            console.log(data)
+            
         })
     },[url])
     

@@ -9,7 +9,7 @@ const Banner = ()=>{
                 {/* <div className="">
                     <img src="https://i.ibb.co.com/RSJRCkJ/pexels-chokniti-khongchum-1197604-2280549.jpg" alt="" className="w-full  h-[700px]"/>
                 </div> */}
-            <div className="max-w-7xl mx-6 md:mx-10 lg:auto">
+            <div className="max-w-7xl mx-6 md:mx-10 lg:mx-auto">
        
             {/* <div className="absolute inset-0 bg-white opacity-80  rounded-lg"></div> */}
                 <div className="  flex flex-col justify-center items-center">

@@ -13,10 +13,11 @@ const Home = ()=>{
             <Banner></Banner>
             
             <LookingFor></LookingFor>
+            <DoctorArea></DoctorArea>
             
             <ClientAndSpecialites></ClientAndSpecialites>
             <OverView></OverView>
-            <DoctorArea></DoctorArea>
+            
             <ExtraFeature></ExtraFeature>
             <Blog></Blog>
         </div>

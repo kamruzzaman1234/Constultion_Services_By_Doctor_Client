@@ -12,13 +12,13 @@ const ViewDoctor = ()=>{
          const {image, name, title, _id, description, medical_name,
             price, rating, location, join_time,  online_service_time,
              experience, offline_service_time} = allDoctorData
-             console.log(allDoctorData)
+            
              
          
          
     return(
         <div className="py-10 bg-slate-100">
-            <div className="max-w-7xl mx-6 md:mx-10 lg:auto">
+            <div className="max-w-7xl mx-6 md:mx-10 lg:mx-auto">
                 <div className="flex flex-col lg:flex-row justify-between items-center">
                     <div className="flex gap-5 lg:gap-10">
                         <div className="border-2 border-blue-200 rounded-lg">

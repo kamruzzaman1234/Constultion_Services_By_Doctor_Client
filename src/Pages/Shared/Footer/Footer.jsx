@@ -7,7 +7,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 const Footer = () => {
     return (
         <div className="py-10">
-            <div className="max-w-7xl mx-6 md:mx-10 lg:auto">
+            <div className="max-w-7xl mx-6 md:mx-10 lg:mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-6">
                     {/* About Section */}
                     <div className="space-y-3 px-8 py-4 flex justify-center items-center flex-col rounded-lg">

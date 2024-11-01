@@ -13,7 +13,7 @@ const AddService = ()=>{
         const offline_time_service = form.offline_time_service.value 
         const allServiceValue = {name, title, description, location, medical_name, experience, rating, online_time_service, offline_time_service}
         console.log(allServiceValue)
-        fetch(`http://localhost:6007/addDoctor`, {
+        fetch(`https://consultation-services-by-doctors.vercel.app/addDoctor`, {
             method:"POST",
             headers:{
                 'content-type':'application/json'
@@ -26,12 +26,12 @@ const AddService = ()=>{
                 alert('Added Successfully')
                 form.reset()
             }
-            console.log(data)
+            
         })
     }
     return(
         <div className="py-20 bg-blue-300">
-            <div className="max-w-7xl mx-6 md:mx-10 lg:auto">
+            <div className="max-w-7xl mx-6 md:mx-10 lg:mx-auto">
   <h2 className="text-3xl font-bold mb-8 text-center text-white divider">Add New Service</h2>
         <div className="flex flex-col lg:flex-row gap-4 p-8 rounded-lg bg-blue-900">
             <div>

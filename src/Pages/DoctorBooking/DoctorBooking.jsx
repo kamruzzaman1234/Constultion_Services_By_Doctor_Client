@@ -37,12 +37,13 @@ const DoctorBooking = ()=>{
                     title,location
                 }
                 console.log("All Info is", allInfo)
-                fetch(`http://localhost:6007/doctorBooking`, {
+                fetch(`https://consultation-services-by-doctors.vercel.app/doctorBooking`, {
                    method:"POST",
                    headers: {
                     'content-type':'application/json'
                    },
-                   body: JSON.stringify(allInfo)     
+                   body: JSON.stringify(allInfo),
+                      
                 })
                 .then(res=> res.json())
                 .then(data=>{
@@ -55,7 +56,7 @@ const DoctorBooking = ()=>{
          }
     return(
         <div className="py-20 bg-slate-800">
-            <div className="max-w-7xl mx-6 md:mx-10 lg:auto">
+            <div className="max-w-7xl mx-6 md:mx-10 lg:mx-auto">
                 <div>
                     <h2 className="bg-slate-200 text-blue-700 
                      text-center py-3 text-[22px] 

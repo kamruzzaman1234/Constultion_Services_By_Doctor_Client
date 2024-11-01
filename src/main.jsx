@@ -45,17 +45,17 @@ const router = createBrowserRouter([
       {
         path: "viewDoctor/:id",
         element: <PrivetRouter> <ViewDoctor></ViewDoctor> </PrivetRouter>,
-        loader: ({ params })=> fetch(`http://localhost:6007/doctorInfo/${params.id}`)
+        loader: ({ params })=> fetch(`https://consultation-services-by-doctors.vercel.app/doctorInfo/${params.id}`)
       },
       {
         path: "bookingDoctor/:id",
         element: <PrivetRouter> <DoctorBooking></DoctorBooking> </PrivetRouter>,
-        loader: ({ params })=> fetch(`http://localhost:6007/doctorInfo/${params.id}`)
+        loader: ({ params })=> fetch(`https://consultation-services-by-doctors.vercel.app/doctorInfo/${params.id}`)
       },
       {
         path:"consultationList",
         element: <PrivetRouter> <ConsultationList></ConsultationList> </PrivetRouter>,
-        loader: ({params})=> fetch(`http://localhost:6007/doctorBooking`)
+        loader: ({params})=> fetch(`https://consultation-services-by-doctors.vercel.app/doctorBooking`)
       },
       {
         path:"addService",
