@@ -55,7 +55,7 @@ const DoctorBooking = ()=>{
          }
     return(
         <div className="py-20 bg-slate-800">
-            <div className="max-w-7xl mx-6 lg:mx-auto">
+            <div className="max-w-7xl mx-6 md:mx-10 lg:auto">
                 <div>
                     <h2 className="bg-slate-200 text-blue-700 
                      text-center py-3 text-[22px] 

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const LookingFor  =()=>{
     return(
         <div className="py-20">
-            <div className="max-w-7xl mx-6 lg:mx-auto">
+            <div className="max-w-7xl mx-6 md:mx-10 lg:auto">
                 <div>
                     <h2 className="text-[26px] font-bold text-center mb-12">What Are You Looking For</h2>
                 </div>
@@ -16,7 +16,7 @@ const LookingFor  =()=>{
                         <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
                         <div className="absolute inset-0  flex flex-col justify-center items-center">
                             <h3 className="font-bold text-white text-[18px] mb-2">Visit a Doctor</h3>
-                            <Link to="/bookingArea"
+                            <Link to="/doctor"
                             className="bg-blue-600 text-white 
                             py-2 px-4 rounded-lg font-bold hover:bg-blue-700 transition">Booking Now</Link>
                         </div>
@@ -29,7 +29,7 @@ const LookingFor  =()=>{
                         <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
                         <div className="absolute inset-0  flex flex-col justify-center items-center">
                             <h3 className="font-bold text-white text-[18px] mb-2">Medical</h3>
-                            <Link to="/bookingArea"
+                            <Link to="/doctor"
                             className="bg-blue-600 text-white 
                             py-2 px-4 rounded-lg font-bold hover:bg-blue-700 transition">Booking Now</Link>
                         </div>
@@ -42,7 +42,7 @@ const LookingFor  =()=>{
                         <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
                         <div className="absolute inset-0  flex flex-col justify-center items-center">
                             <h3 className="font-bold text-white text-[18px] mb-2">Services</h3>
-                            <Link to="/bookingArea"
+                            <Link to="/doctor"
                             className="bg-blue-600 text-white 
                             py-2 px-4 rounded-lg font-bold hover:bg-blue-700 transition">Booking Now</Link>
                         </div>

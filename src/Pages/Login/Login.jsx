@@ -2,7 +2,7 @@ import { FaRegEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { Link,useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 
 
 import { useContext, useState } from "react";
@@ -14,44 +14,45 @@ const Login = ()=>{
     const location = useLocation()
     const auth = getAuth();
     const gProvider = new GoogleAuthProvider();
-
-  
-    const handleLogIn = (e)=>{
-        e.preventDefault()
-        const form = e.target 
-        const email = form.email.value 
-        const password = form.password.value
-        SignIn(email, password)
-        .then(result=> {
-            const LogInUser = result.user
-            console.log("Your Login Data is ", LogInUser)
-            toast("Login Successfully")
-            navigate(location?.state ? location?.state: '/' )
-
-        })
-    }
-    
+ 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
 
-    const handleEmail = ()=>{
+    const handleEmail = () => {
+        signOut(auth)
         signInWithPopup(auth, gProvider)
-        console.log(signInWithPopup(auth, gProvider))
-        .then(result=>{
-          const user = result.user
-          console.log(user)
-          navigate( '/')
-        })
-        .catch(error=>{
-          console.log(error.message)
-        })
-      }
+          .then(result => {
+              const user = result.user;
+              console.log("User Logged In:", user);
+              navigate('/');
+          })
+          .catch(error => {
+              console.error("Error in Google Sign-In:", error.message);
+          });
+    };
 
+    const handleLogIn = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+    
+        SignIn(email, password)
+          .then(result => {
+              const LogInUser = result.user;
+              console.log("Your Login Data is:", LogInUser);
+              toast("Login Successfully");
+              navigate(location?.state ? location?.state : '/');
+          })
+          .catch(error => {
+              console.error("Error in Email Sign-In:", error.message);
+          });
+    };
 
     return(
         <div className="py-10 bg-gray-100">
-            <div className="max-w-7xl mx-6 lg:mx-auto">
+            <div className="max-w-7xl mx-6 md:mx-10 lg:auto">
             <ToastContainer></ToastContainer>
                 <div className="my-10 text-center">
                     <h2 className="text-[40px] font-bold text-blue-900 underline">Login</h2>

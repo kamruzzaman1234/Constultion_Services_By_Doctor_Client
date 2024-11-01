@@ -15,7 +15,7 @@ const Navbar = ()=>{
   }
     return(
         <div>
- <div className="navbar max-w-7xl mx-6 lg:mx-auto bg-base-100">
+ <div className="navbar max-w-7xl mx-6 md:mx-10 lg:auto bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -38,13 +38,13 @@ const Navbar = ()=>{
         {user ? <>
           <li className=""><Link to="/">Home</Link></li>
         <li className=""><Link to="/doctor">Doctor</Link></li>
-        <li><Link to="/consultationList"></Link>Consultation List</li>
-        <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/addService">Add Service</Link></li>
+        <li><Link to="/consultationList">Consultation list</Link></li>
+        <li className=""><Link to="/addService">Add Service</Link></li>
         </>: <>
         <li className=""><Link to="/">Home</Link></li>
         <li className=""><Link to="/doctor">Doctor</Link></li>
-        <li><Link to="/consultationList"></Link>Consultation List</li>
-        <li className="bg-blue-800 text-[17px] text-white mx-2 rounded-[10px] font-bold"><Link to="/addService">Add Service</Link></li>
+        <li><Link to="/consultationList">Consultation List</Link></li>
+        
         </>}
         
       </ul>
@@ -69,7 +69,7 @@ const Navbar = ()=>{
     
     </ul>
   </div>
-  <div className="navbar-end">
+  <div className="navbar-start lg:navbar-end">
       {user ? <div className="relative">
          <ul className="menu menu-horizontal px-1">
       <li><a></a></li>

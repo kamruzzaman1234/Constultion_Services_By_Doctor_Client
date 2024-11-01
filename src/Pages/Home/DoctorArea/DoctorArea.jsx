@@ -16,7 +16,7 @@ const DoctorArea = ()=>{
     },[])
     return(
         <div className="py-20 bg-gray-100">
-            <div className="max-w-7xl mx-6 lg:mx-auto">
+            <div className="max-w-7xl mx-6 md:mx-10 lg:auto">
             <div className="mb-12">
                     <h2 className="text-[26px] font-bold text-center">Our Doctors</h2>
                     <p className="text-center">Visit our doctor and treatment in this doctor.Doctors are very professional and many experienced</p>

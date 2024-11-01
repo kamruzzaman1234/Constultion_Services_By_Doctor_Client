@@ -64,11 +64,12 @@ const ConsultationList = ()=>{
     },[url])
     
     return(
-      <div className="overflow-x-auto">
-  <table className="min-w-full bg-[#FF5A] border border-gray-200 rounded-lg shadow-md">
+      <div className="py-10">
+  <table className="max-w-7xl mx-6 lg:mx-auto  bg-[#FF5A] border border-gray-200 rounded-lg shadow-md">
     {/* Table Head */}
     <thead>
-      <tr className="bg-blue-500 text-white text-xs md:text-sm uppercase tracking-wide font-semibold">
+      <tr className="bg-blue-500 w-full text-white text-xs md:text-sm uppercase
+       tracking-wide font-semibold">
         <th className="p-2 md:p-3 text-center">
           <input type="checkbox" className="checkbox" />
         </th>

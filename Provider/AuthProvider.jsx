@@ -3,6 +3,7 @@ import auth from "../Firebase/Firebase.config";
 import { createUserWithEmailAndPassword, onAuthStateChanged,
  signInWithEmailAndPassword, 
  signOut} from "firebase/auth";
+import axios from "axios";
 
 export const AuthContext = createContext()
 const AuthProvider = ({children})=>{
@@ -31,6 +32,13 @@ const userHandleInfo = {createSignUp, user, loading , SignIn, logOut}
         setLoading(false)
         setUser(currentUser)
         console.log("Current User is", currentUser)
+        if(currentUser){
+            const loggedEmailUser = {email: currentUser.email}
+            axios.post('http://localhost:6007/jwt', loggedEmailUser, {withCredentials: true})
+            .then(res=>{
+                console.log('Token Response', res.data)
+            })
+        }
     })
     return ()=> unsubscribe()
    },[])

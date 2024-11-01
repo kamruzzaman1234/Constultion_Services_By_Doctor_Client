@@ -5,13 +5,14 @@ import { useContext } from "react";
 const PrivetRouter = ({children})=>{
     const {user, loading} = useContext(AuthContext)
     const location = useLocation()
-    console.log(user.email)
+   
+    console.log(user?.email)
     if(user?.email){
         return children
     }
 
     if (loading) {
-        return <p>Loading...</p>; // যদি লোডিং হয় তাহলে লোডিং মেসেজ দেখাবে
+        return <p>Loading...</p>; 
     }
     
     if (!user) {
