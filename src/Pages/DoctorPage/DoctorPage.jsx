@@ -27,7 +27,7 @@ const DoctorPage = () => {
 
     return (
         <div className="py-20 bg-blue-100">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-6 md:mx-10 lg:mx-auto">
                 <h2 className="text-2xl font-semibold mb-6 text-center">
                     <span className="font-bold">{filteredDoctors.length}</span> Doctors Found in General Physician Department
                 </h2>
