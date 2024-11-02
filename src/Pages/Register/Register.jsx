@@ -21,7 +21,7 @@ const Register = ()=>{
         .then(result=>{
             const user = result.user 
             if(user.insertedId)
-                console.log("Your User is",user);
+               
                 toast("Register Successfully")
                 form.reset();
         })

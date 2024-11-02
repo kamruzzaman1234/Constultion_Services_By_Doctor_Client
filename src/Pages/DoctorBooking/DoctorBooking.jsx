@@ -7,7 +7,7 @@ const DoctorBooking = ()=>{
     const {image, name, title, _id, description, medical_name,
         price, rating, location, join_time,  online_service_time,
          experience, offline_service_time} = allDoctorData
-         console.log("All Doctor Is", allDoctorData)
+
          const {user} = useContext(AuthContext)
         
          const handleSubmit = (e)=>{
@@ -36,7 +36,7 @@ const DoctorBooking = ()=>{
                     Phone_Number : phone_number,
                     title,location
                 }
-                console.log("All Info is", allInfo)
+                
                 fetch(`https://consultation-services-by-doctors.vercel.app/doctorBooking`, {
                    method:"POST",
                    headers: {
@@ -51,7 +51,7 @@ const DoctorBooking = ()=>{
                         alert('Booking Successfully')
                         form.reset()
                     }
-                    console.log(data)
+                  
                 })
          }
     return(

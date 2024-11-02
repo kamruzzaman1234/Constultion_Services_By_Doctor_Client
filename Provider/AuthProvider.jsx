@@ -31,7 +31,7 @@ const userHandleInfo = {createSignUp, user, loading , SignIn, logOut}
     const unsubscribe = onAuthStateChanged(auth, currentUser=>{
         setLoading(false)
         setUser(currentUser)
-        console.log("Current User is", currentUser)
+
         if(currentUser){
             const loggedEmailUser = {email: currentUser.email}
             axios.post('https://consultation-services-by-doctors.vercel.app/jwt', loggedEmailUser, {withCredentials: true})

@@ -6,7 +6,7 @@ const PrivetRouter = ({children})=>{
     const {user, loading} = useContext(AuthContext)
     const location = useLocation()
    
-    console.log(user?.email)
+    
     if(user?.email){
         return children
     }
