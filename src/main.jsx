@@ -20,6 +20,7 @@ import ViewDoctor from './Pages/ViewDoctor/ViewDoctor.jsx';
 import DoctorBooking from './Pages/DoctorBooking/DoctorBooking.jsx';
 import ConsultationList from './Pages/ConsultationList/ConsultationList.jsx';
 import AddService from './Pages/AddService/AddService.jsx';
+import AppointmentPage from './Pages/AppointmnetPage/AppointmentPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path:"addService",
         element:<PrivetRouter><AddService></AddService></PrivetRouter>
+      },
+      {
+        path:"appointment",
+        element:<AppointmentPage></AppointmentPage>
       }
     ]
   },

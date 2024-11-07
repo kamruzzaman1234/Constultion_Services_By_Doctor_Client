@@ -1,35 +1,61 @@
-import { Link } from "react-router-dom";
-import Filter from "./Filter";
-import { FaArrowAltCircleRight } from "react-icons/fa";
+// DoctorCarousel.js
+import React from 'react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Link } from 'react-router-dom';
 
-const Banner = ()=>{
-    return(
-        <div className="py-[150px] bg-gradient-to-r from-cyan-200 via-neutral-100 to-blue-100"
-         style={{}}>
-                {/* <div className="">
-                    <img src="https://i.ibb.co.com/RSJRCkJ/pexels-chokniti-khongchum-1197604-2280549.jpg" alt="" className="w-full  h-[700px]"/>
-                </div> */}
-            <div className="max-w-7xl mx-6 md:mx-10 lg:mx-auto">
-       
-            {/* <div className="absolute inset-0 bg-white opacity-80  rounded-lg"></div> */}
-                <div className="  flex flex-col justify-center items-center">
-                <div className="text-center">
-                    <h2 className="text-[30px] lg:text-[46px] font-bold">Search Doctor Make and Appointment</h2>
-                    <p className="text-[20px]">Discover the best doctors clients and hospital the city nearest to you.</p>
-                </div>
-                <div className="mt-10 flex justify-center items-center">
-                   
-                   <div className="bg-blue-800 flex justify-center items-center rounded-full">
-                        
-                        
-                        <Link to="/doctor" className=" text-center px-8 lg:px-14 flex items-center gap-2 justify-center
-                         py-4 font-bold text-white text-[12px] lg:text-[26px]"><FaArrowAltCircleRight className=""></FaArrowAltCircleRight> Choose Doctor and Booking</Link>
-                   </div>
-                </div>
-                </div>
-                
-             </div>
-         </div>
-    )
-}
+const Banner = () => {
+  const slides = [
+    {
+      img: 'https://i.ibb.co.com/5KHjCT3/pexels-kerimeveyik-28782562.jpg', // Replace with doctor page image
+      title: 'Experienced Doctors',
+      description: 'Our team consists of the best specialists dedicated to your health.',
+    },
+    {
+      img: 'https://i.ibb.co.com/xqh8Kbb/pexels-huuhuynh-17188941.jpg',
+      title: '24/7 Consultation',
+      description: 'Access to professional medical advice at any time of day.',
+    },
+    {
+      img: 'https://i.ibb.co.com/JrShBqf/pexels-enginakyurt-4056214.jpg',
+      title: 'Personalized Care',
+      description: 'Get healthcare tailored to meet your unique needs.',
+    },
+  ];
+
+  return (
+    <div className="max-w-7xl mx-auto sm:px-6">
+          <div className="">
+      <Swiper className=""
+        modules={[Autoplay, Pagination, Navigation]}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        pagination={{ clickable: true }}
+        navigation={true}
+        spaceBetween={30}
+        centeredSlides={true}
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index} className="relative flex items-center justify-center h-[400px] md:h-[500px]
+           py-[200px] bg-cover bg-center text-white"
+           style={{ backgroundImage: `url(${slide.img})` }}>
+            <div className="absolute inset-0 bg-black opacity-30"></div> {/* Dark overlay */}
+            <div className="relative z-10 text-center p-4">
+              <h2 className="text-3xl font-semibold text-white mb-4 animate-fadeInUp">{slide.title}</h2>
+              <p className="text-white mb-6 animate-fadeInUp">{slide.description}</p>
+              <Link to="/doctor" className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 transition transform hover:scale-105">
+                Learn More
+              </Link>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+    </div>
+  
+  );
+};
+
 export default Banner;

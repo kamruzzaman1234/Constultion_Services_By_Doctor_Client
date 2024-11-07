@@ -1,4 +1,4 @@
-import BackgroundImg from "./Banner/BackgroundImg";
+
 import Banner from "./Banner/Banner";
 import Blog from "./BlogArea/Blog";
 import ClientAndSpecialites from "./ClientAndSpecialites/ClientAndSpecialites";
