@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom"
 import AuthProvider, { AuthContext } from "../../../Provider/AuthProvider"
-import { useContext } from "react"
+import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 const DoctorBooking = ()=>{
     const allDoctorData = useLoaderData()
@@ -61,6 +62,8 @@ const DoctorBooking = ()=>{
                     <h2 className="bg-slate-200 text-blue-700 
                      text-center py-3 text-[22px] 
                      rounded-lg font-bold">Doctor Booking Now</h2>
+                    <Link to="/consultationList" className=" text-[17px] font-bold text-red-800
+                     bg-white px-3 py-2 rounded-lg">Check Your Consultation List</Link>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-4">
                     <div className="bg-white h-[550px] shadow-lg rounded-lg px-8 ">

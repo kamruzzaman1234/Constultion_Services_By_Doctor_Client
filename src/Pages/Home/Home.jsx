@@ -13,7 +13,7 @@ const Home = ()=>{
             <Banner></Banner>
             
             <LookingFor></LookingFor>
-            <DoctorArea></DoctorArea>
+            <DoctorArea></DoctorArea>   
             
             <ClientAndSpecialites></ClientAndSpecialites>
             <OverView></OverView>

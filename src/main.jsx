@@ -21,6 +21,9 @@ import DoctorBooking from './Pages/DoctorBooking/DoctorBooking.jsx';
 import ConsultationList from './Pages/ConsultationList/ConsultationList.jsx';
 import AddService from './Pages/AddService/AddService.jsx';
 import AppointmentPage from './Pages/AppointmnetPage/AppointmentPage.jsx';
+import ReviewPage from './Pages/ReviewPage/ReviewPage.jsx';
+import ContactPage from './Pages/ContactPage/ContactPage.jsx';
+import AboutPage from './Pages/AboutPage/AboutPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -65,6 +68,18 @@ const router = createBrowserRouter([
       {
         path:"appointment",
         element:<AppointmentPage></AppointmentPage>
+      },
+      {
+        path:"review",
+        element:<ReviewPage></ReviewPage>
+      },
+      {
+        path:"contact",
+        element: <ContactPage></ContactPage>
+      },
+      {
+        path:"about",
+        element: <AboutPage></AboutPage>
       }
     ]
   },

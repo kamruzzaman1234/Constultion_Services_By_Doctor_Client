@@ -56,7 +56,7 @@ const handlePageChange = (page) => {
         <p>Choose Your Best Doctor and Easyly Services</p>
         </div>
 
-        {/* ডক্টর লিস্ট */}
+       
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
                     {getPaginatedData().map(doctor => (
                         <DoctorList key={doctor._id} doctor={doctor} />

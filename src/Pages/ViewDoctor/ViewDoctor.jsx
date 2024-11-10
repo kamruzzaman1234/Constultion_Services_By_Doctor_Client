@@ -17,7 +17,7 @@ const ViewDoctor = ()=>{
          
          
     return(
-        <div className="py-10 bg-slate-100">
+        <div className="py-20 bg-slate-100">
             <div className="max-w-7xl mx-6 md:mx-10 lg:mx-auto">
                 <div className="flex flex-col lg:flex-row justify-between items-center">
                     <div className="flex gap-5 lg:gap-10">

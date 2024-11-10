@@ -27,7 +27,7 @@ const Banner = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto sm:px-6">
+    <div className="">
           <div className="">
       <Swiper className=""
         modules={[Autoplay, Pagination, Navigation]}
