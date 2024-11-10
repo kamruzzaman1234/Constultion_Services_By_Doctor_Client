@@ -43,7 +43,8 @@ const DoctorArea = () => {
                         Visit our doctor and treatment in this doctor. Doctors are very professional and many experienced.
                     </p>
                 </div>
-                
+                {/* Service Area */}
+     
                
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
                     {getPaginatedData().map(docList => (

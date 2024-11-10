@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import DoctorInfo from "./DoctorInfo";
-
+import { Link } from "react-router-dom";
 const DoctorPage = () => {
     const [doctorsData, setDoctorsData] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
@@ -31,6 +31,22 @@ const DoctorPage = () => {
                 <h2 className="text-2xl font-semibold mb-6 text-center">
                     <span className="font-bold">{filteredDoctors.length}</span> Doctors Found in General Physician Department
                 </h2>
+
+
+                <div className="flex flex-col items-center justify-center my-4 py-6 bg-gray-100">
+      <h1 className="text-3xl font-semibold text-center text-gray-800 mb-4">
+        Want to Add a New Service?
+      </h1>
+      <p className="text-lg text-gray-600 mb-6">
+        If you are a doctor, you can add your services here to start offering consultations.
+      </p>
+      <Link to="/addService"
+        onClick={() => alert('Redirecting to add service form...')} // Replace with actual redirect or action
+        className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        Add Service
+      </Link>
+    </div>
 
                 {/* Search Input */}
                 <div className="flex justify-center mb-8">
