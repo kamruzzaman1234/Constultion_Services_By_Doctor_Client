@@ -7,7 +7,7 @@ import { useContext, useEffect, useState } from "react";
 const ConsultationList = () => {
   const [consultationList, setConsultationList] = useState([]);
   const { user } = useContext(AuthContext);
-  const url = `https://consultation-services-by-doctors.vercel.app/doctorBooking`;
+  const url = `http://localhost:6007/doctorBooking`;
 
   const handleDelete = (id) => {
     const processed = confirm("Are You Sure you want to Delete");
@@ -27,25 +27,30 @@ const ConsultationList = () => {
   };
 
   const handleConfirm = (id) => {
-    fetch(`https://consultation-services-by-doctors.vercel.app/doctorBooking/${id}`, {
-      method: "PATCH",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({ status: "confirm" }),
-      credentials: "include",
+    fetch(`http://localhost:6007/doctorBooking/${id}`,{
+        method: "PATCH",
+        headers: {
+            "content-type": "application/json",
+        },
+        body: JSON.stringify({ status: "confirm" }),
     })
-      .then((res) => res.json())
-      .then((data) => {
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data); // Response data চেক করো
         if (data.modifiedCount > 0) {
-          const remaining = consultationList.filter((booking) => booking._id !== id);
-          const updated = consultationList.find((booking) => booking._id === id);
-          updated.status = "confirm";
-          const newBooking = [updated, ...remaining];
-          setConsultationList(newBooking);
+            const remaining = consultationList.filter((booking) => booking._id !== id);
+            const updated = { 
+                ...consultationList.find((booking) => booking._id === id), 
+                status: "confirm" 
+            };
+            const newBooking = [updated, ...remaining];
+            setConsultationList(newBooking);
         }
-      });
-  };
+    })
+    .catch((err) => console.error("Error:", err)); // Error handling
+};
+
+
 
   useEffect(() => {
     fetch(url)

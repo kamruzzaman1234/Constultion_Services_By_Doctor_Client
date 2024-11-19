@@ -13,7 +13,7 @@ const AddService = ()=>{
         const offline_time_service = form.offline_time_service.value 
         const allServiceValue = {name, title, description, location, medical_name, experience, rating, online_time_service, offline_time_service}
         console.log(allServiceValue)
-        fetch(`https://consultation-services-by-doctors.vercel.app/addDoctor`, {
+        fetch(`http://localhost:6007/addDoctor`, {
             method:"POST",
             headers:{
                 'content-type':'application/json'

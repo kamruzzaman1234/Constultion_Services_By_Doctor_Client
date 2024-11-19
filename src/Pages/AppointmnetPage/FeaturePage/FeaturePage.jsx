@@ -16,7 +16,7 @@ const FeaturePage = () => {
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
-        const response = await fetch('https://consultation-services-by-doctors.vercel.app/doctorInfo');
+        const response = await fetch('http://localhost:6007/doctorInfo');
         const data = await response.json();
         setDoctors(data);
       } catch (error) {

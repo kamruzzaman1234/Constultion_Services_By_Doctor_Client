@@ -24,6 +24,7 @@ import AppointmentPage from './Pages/AppointmnetPage/AppointmentPage.jsx';
 import ReviewPage from './Pages/ReviewPage/ReviewPage.jsx';
 import ContactPage from './Pages/ContactPage/ContactPage.jsx';
 import AboutPage from './Pages/AboutPage/AboutPage.jsx';
+// import DoctorBookList from './Pages/Home/DoctorBookList/DoctorBookList.jsx';
 
 const router = createBrowserRouter([
   {
@@ -49,17 +50,17 @@ const router = createBrowserRouter([
       {
         path: "viewDoctor/:id",
         element: <PrivetRouter> <ViewDoctor></ViewDoctor> </PrivetRouter>,
-        loader: ({ params })=> fetch(`https://consultation-services-by-doctors.vercel.app/doctorInfo/${params.id}`)
+        loader: ({ params })=> fetch(`http://localhost:6007/doctorInfo/${params.id}`)
       },
       {
         path: "bookingDoctor/:id",
         element: <PrivetRouter> <DoctorBooking></DoctorBooking> </PrivetRouter>,
-        loader: ({ params })=> fetch(`https://consultation-services-by-doctors.vercel.app/doctorInfo/${params.id}`)
+        loader: ({ params })=> fetch(`http://localhost:6007/doctorInfo/${params.id}`)
       },
       {
         path:"consultationList",
         element: <PrivetRouter> <ConsultationList></ConsultationList> </PrivetRouter>,
-        loader: ({params})=> fetch(`https://consultation-services-by-doctors.vercel.app/doctorBooking`)
+        loader: ()=> fetch(`http://localhost:6007/doctorBooking`)
       },
       {
         path:"addService",

@@ -10,7 +10,7 @@ function DoctorTitleList() {
 
   useEffect(() => {
     // Fetch doctors data from the API
-    axios.get('https://consultation-services-by-doctors.vercel.app/doctorInfo')
+    axios.get('http://localhost:6007/doctorInfo')
       .then((response) => {
         setDoctors(response.data);
         

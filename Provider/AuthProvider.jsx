@@ -34,7 +34,7 @@ const userHandleInfo = {createSignUp, user, loading , SignIn, logOut}
 
         if(currentUser){
             const loggedEmailUser = {email: currentUser.email}
-            axios.post('https://consultation-services-by-doctors.vercel.app/jwt', loggedEmailUser, {withCredentials: true})
+            axios.post('http://localhost:6007/jwt', loggedEmailUser, {withCredentials: true})
             .then(res=>{
                 console.log('Token Response', res.data)
             })

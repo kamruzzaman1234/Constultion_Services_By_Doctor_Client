@@ -6,7 +6,7 @@ const DoctorPage = () => {
     const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
-        fetch("https://consultation-services-by-doctors.vercel.app/doctorInfo")
+        fetch("http://localhost:6007/doctorInfo")
             .then((res) => res.json())
             .then((data) => {
                 if (Array.isArray(data)) {

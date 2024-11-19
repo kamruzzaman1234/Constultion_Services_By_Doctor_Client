@@ -6,7 +6,7 @@ const DoctorSelector = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const itemsPerPage = 4; 
-    const url = "https://consultation-services-by-doctors.vercel.app/doctorInfo";
+    const url = "http://localhost:6007/doctorInfo";
 
   
 
